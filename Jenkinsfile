@@ -63,7 +63,7 @@ pipeline {
         stage('Build & Push Docker Image') {
             // Credentials of DockerHub which stored in the Jenkins Credentials
             environment {
-                DOCKER_IMAGE = "avian19/spring-docker:${BUILD_NUMBER}"
+                DOCKER_IMAGE = "abdurakhimovda522/spring-docker:${BUILD_NUMBER}"
                 REGISTRY_CREDENTIALS = credentials('docker-cred')
             }
             steps {
@@ -83,14 +83,14 @@ pipeline {
             // GIT Repo and username
             environment {
                 GIT_REPO_NAME = "Springboot-end-to-end"
-                GIT_USER_NAME = "AmanPathak-DevOps"
+                GIT_USER_NAME = "Damir94-DevOps"
             }
             steps {
                 // Replacing the previous BUILD_NUMBER with NEW_BUILD_NUMBER and pushing the changes to Github
                 withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
                     sh '''
-                        git config user.email "aman07pathak@gmail.com"
-                        git config user.name "AmanPathak-DevOps"
+                        git config user.email "abdurakhimov.da@gmail.com"
+                        git config user.name "Damir94"
                         BUILD_NUMBER=${BUILD_NUMBER}
                         imageTag=$(grep -oP '(?<=spring-docker:)[^ ]+' deployment.yml)
                         sed -i "s/spring-docker:${imageTag}/spring-docker:${BUILD_NUMBER}/" deployment.yml
