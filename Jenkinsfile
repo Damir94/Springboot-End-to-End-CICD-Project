@@ -24,7 +24,7 @@ pipeline {
         stage('Static Code Analysis') {
             // Code Analysis will happend, the Sonar server configured and URL written in the environment below
             environment {
-                SONAR_URL = "http://3.89.227.188:9000"
+                SONAR_URL = "http://100.25.214.19:9000/"
             }
             // Starting the Static Code Analysis 
             steps {
@@ -51,7 +51,7 @@ pipeline {
                 script {
                     // If Checkbox tick then, Perform this stage
                     if (params.YES) {
-                        sh 'jfrog rt upload --url http://34.228.44.32:8082/artifactory/ --access-token ${ARTIFACTORY_ACCESS_TOKEN} target/*.jar springboot-web-app/'
+                        sh 'jfrog rt upload --url http://34.230.82.7:8082/artifactory/ --access-token ${ARTIFACTORY_ACCESS_TOKEN} target/*.jar springboot-web-app/'
                     } else {
                         // If Checkbox not tick then, Skip this stage and go for the next stage
                         return
@@ -82,8 +82,8 @@ pipeline {
         stage('Updating Deployment File') {
             // GIT Repo and username
             environment {
-                GIT_REPO_NAME = "Springboot-end-to-end"
-                GIT_USER_NAME = "Damir94-DevOps"
+                GIT_REPO_NAME = "Springboot-End-to-End-CICD-Project"
+                GIT_USER_NAME = "Damir94"
             }
             steps {
                 // Replacing the previous BUILD_NUMBER with NEW_BUILD_NUMBER and pushing the changes to Github
@@ -96,7 +96,7 @@ pipeline {
                         sed -i "s/spring-docker:${imageTag}/spring-docker:${BUILD_NUMBER}/" deployment.yml
                         git add deployment.yml
                         git commit -m "Update deployment Image to version \${BUILD_NUMBER}"
-                        git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:master
+                        git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:main
                     '''
                 }
             }
