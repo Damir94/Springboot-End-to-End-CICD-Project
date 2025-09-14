@@ -35,7 +35,7 @@ The flow generally moves from left to right, triggered by a developer pushing ne
 
 # Implementation Step
 
- *1. Jenkins Server Setup*
+ # 1. Jenkins Server Setup
  
    - We have to configure Jenkins, For that We are going to create an EC2 server where Jenkins will be installed. Also, We are going to install some other tools as well such as Sonarqube and Docker so, we need more RAM and CPU. 
    - Configurations: t2.large, Ubuntu22.04, Security Group Port Open- 22, 9000, 8080, 8081, and 8082, Storage: 30GB gp2.
@@ -48,14 +48,14 @@ The flow generally moves from left to right, triggered by a developer pushing ne
 
 
 
- *2. After creating EC2 Instance, log in to the created machine using ssh.*
+ # 2. After creating EC2 Instance, log in to the created machine using ssh.
 
    - ssh -i <key-pair> ubuntu@instanceipaddress
 
    <img width="849" height="140" alt="Screenshot 2025-09-13 at 3 07 01 PM" src="https://github.com/user-attachments/assets/be59b956-f0bc-4cb6-8276-73e6f9998d73" />
 
 
- *3. Install Jenkins. Follow the command to install it on your EC2 Instance.*
+ # 3. Install Jenkins. Follow the command to install it on your EC2 Instance.
 
    # Installing Java* 
    - sudo apt update -y
@@ -78,6 +78,40 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
    You can see below Jenkins has been installed.
    
    <img width="1116" height="218" alt="Screenshot 2025-09-13 at 3 10 17 PM" src="https://github.com/user-attachments/assets/e6e7398e-b689-4a83-8700-750018d91d38" />
+
+
+ # 4. Now, browse the Jenkins server with the help of public_ip:8080. Make sure, you have opened port number 8080 in the instance’s security group.
+
+   <img width="1600" height="322" alt="Screenshot 2025-09-13 at 3 11 23 PM" src="https://github.com/user-attachments/assets/ec111b15-120c-44ba-a117-f5161f0e3587" />
+
+ # 5. Get the password using the command 
+ 
+   - cat /var/lib/jenkins/secrets/initialAdminPassword.
+ 
+ # 6. After entering the password, Click on Continue.
+ 
+   <img width="973" height="455" alt="Screenshot 2025-09-13 at 3 12 38 PM" src="https://github.com/user-attachments/assets/a15a7059-3601-4daf-97ee-6c0122938afe" />
+
+ # 7. Click on “Install suggested plugins”
+
+  <img width="678" height="528" alt="Screenshot 2025-09-14 at 10 44 41 AM" src="https://github.com/user-attachments/assets/9d9d6500-61a0-4def-8415-8fdb173b94ba" />
+
+ # 8. For now, you can proceed by clicking on the “skip and continue as admin”
+
+  <img width="844" height="619" alt="Screenshot 2025-09-13 at 3 13 24 PM" src="https://github.com/user-attachments/assets/471a70f0-d78e-42d6-8790-e6525ac37407" />
+
+ # 9. The setup is completed.
+ 
+  <img width="902" height="323" alt="Screenshot 2025-09-13 at 3 13 38 PM" src="https://github.com/user-attachments/assets/c75eb2e0-9a7f-4380-9a91-dd637da5d40b" />
+
+ # 10. Install the Docker Pipeline plugin
+
+  <img width="1903" height="256" alt="Screenshot 2025-09-13 at 3 14 16 PM" src="https://github.com/user-attachments/assets/82bc3f15-6c38-4c41-96ae-83d27d75ae42" />
+
+  <img width="1849" height="260" alt="Screenshot 2025-09-13 at 3 14 52 PM" src="https://github.com/user-attachments/assets/1cda6706-271d-4424-b149-9d1448532b64" />
+
+
+
 
 
 
