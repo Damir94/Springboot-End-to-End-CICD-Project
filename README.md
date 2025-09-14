@@ -107,9 +107,22 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
  # 10. Install the Docker Pipeline plugin
 
   <img width="1903" height="256" alt="Screenshot 2025-09-13 at 3 14 16 PM" src="https://github.com/user-attachments/assets/82bc3f15-6c38-4c41-96ae-83d27d75ae42" />
-
+  
+ # 11. Sonarqube Server Setup
+   - Install the Sonarqube Scanner plugin
+     
   <img width="1849" height="260" alt="Screenshot 2025-09-13 at 3 14 52 PM" src="https://github.com/user-attachments/assets/1cda6706-271d-4424-b149-9d1448532b64" />
 
+ # 12. Install Sonarqube on your EC2 Instance or the local machine.
+   - Follow the command to install it on your machine.
+     - sudo apt install unzip
+     - sudo adduser sonarqube
+     - wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.4.0.54424.zip
+     - unzip sonarqube-9.4.0.54424.zip
+     - sudo chmod -R 755 /home/sonarqube/sonarqube-9.4.0.54424
+     - sudo chown -R sonarqube:sonarqube /home/sonarqube/sonarqube-9.4.0.54424
+     - cd sonarqube-9.4.0.54424/bin/linux-x86-64/
+     - sudo ./sonar.sh start
 
 
 
