@@ -158,42 +158,51 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
  # 18. Install minikube on your local machine.
   - Refer to the given link: https://minikube.sigs.k8s.io/docs/start/
 
- # 19. Install ArgoCD by going on to https://operatorhub.io/operator/argocd-operator and clicking on install. You will get the commands that you have to use to install on your local machine where minikube is installed.
+ # 19. Install ArgoCD by going on to https://operatorhub.io/operator/argocd-operator and clicking on install. You will get the commands that you have to use to install on your local machine where minikube is installed. Command ran and argoCD operator has been installed
 
    <img width="1122" height="440" alt="Screenshot 2025-09-14 at 11 17 08 AM" src="https://github.com/user-attachments/assets/72b452ae-c5a7-4ca9-b79b-4d74aaa3255b" />
-   
- # 20. Command ran and argoCD operator has been installed
-
-   <img width="1594" height="639" alt="Screenshot 2025-09-14 at 11 18 52 AM" src="https://github.com/user-attachments/assets/732867ba-518d-46d1-86bd-108571c66374" />
-
- # 21. Store Docker credentials.
+  
+ # 20. Store Docker credentials.
  
   <img width="1408" height="617" alt="Screenshot 2025-09-14 at 11 23 31 AM" src="https://github.com/user-attachments/assets/5c5a75bc-30e7-4fd8-81dc-0e71f112dab9" />
 
- # 22.  Store Github Credentials as well(Personal access token).
+ # 21.  Store Github Credentials as well(Personal access token).
 
   <img width="1200" height="537" alt="Screenshot 2025-09-14 at 11 24 16 AM" src="https://github.com/user-attachments/assets/b6037519-9280-4b90-ba82-f4138a06cb06" />
 
   <img width="1636" height="321" alt="Screenshot 2025-09-13 at 4 49 12 PM" src="https://github.com/user-attachments/assets/77c01633-1a57-4979-afff-96d77375f131" />
 
- # 23. Deploy on Kubernetes cluster
+ # 22. Deploy on Kubernetes cluster
    - Go to operatorhub.io and enter on argoCD then click the operator Documentation link
 
   <img width="1154" height="581" alt="Screenshot 2025-09-14 at 11 25 55 AM" src="https://github.com/user-attachments/assets/e64508e9-e384-4d24-8029-ede0f14ad0ec" />
 
- # 24. Click on usage -> basics and copy the selected script. 
+ # 23. Click on usage -> basics and copy the selected script. 
 
   <img width="1160" height="353" alt="Screenshot 2025-09-14 at 11 26 54 AM" src="https://github.com/user-attachments/assets/6e1db1fa-2580-46fc-8435-06b01ce82fe2" />
   
- # 25. Create a yml file and paste the script into the file. This script in below screenshot is correct one, paste this script.
+ # 24. Create a yml file and paste the script into the file. This script in below screenshot is correct one, paste this script.
    - vim argocd-basics.yml 
   
   <img width="599" height="291" alt="Screenshot 2025-09-14 at 11 30 32 AM" src="https://github.com/user-attachments/assets/b0757e50-9aeb-4497-90db-bd4355c93524" />
 
- # 26. We are using this script to download the argoCD controller.
-   - Now, the last step to download the argoCD controller which will done by the help of command: kubectl apply -f argocd-basics.yml
-     
+ # 25. We are using this script to download the argoCD controller.
+   Now, the last step to download the argoCD controller which will done by the help of command:
+   - kubectl apply -f argocd-basics.yml
 
+  <img width="1126" height="137" alt="Screenshot 2025-09-13 at 4 53 43 PM" src="https://github.com/user-attachments/assets/dc007d24-f803-4850-aad3-02604beac718" />
+
+# 26. Here, you can see that the argoCD controller has been created.
+
+  <img width="735" height="169" alt="Screenshot 2025-09-13 at 4 54 20 PM" src="https://github.com/user-attachments/assets/3e06e9ad-1fad-4305-bca3-87f215e7db5f" />
+
+# 27. We need the fourth controller because this is responsible for argoCD UI.
+
+  <img width="611" height="71" alt="Screenshot 2025-09-13 at 5 52 56 PM" src="https://github.com/user-attachments/assets/77178524-d408-4128-bf6a-fbadd39f13f5" />
+
+# 28. We want to run this controller on our local machine. So, to do that I will edit the fourth controller where I will change Type: ClusterIP to NodePort.
+
+ 
 # Key Responsibilities & Achievements:
  - Architected the pipeline orchestrated by Jenkins, triggered automatically via webhooks upon code commit.
  - Implemented Continuous Integration (CI) using Maven for building and dependency management, followed by comprehensive automated testing.
