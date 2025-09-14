@@ -57,7 +57,7 @@ The flow generally moves from left to right, triggered by a developer pushing ne
 
  *3. Install Jenkins. Follow the command to install it on your EC2 Instance.*
 
-   *Installing Java* 
+   # Installing Java* 
    - sudo apt update -y
    - sudo apt install openjdk-17-jre -y
    - java --version
@@ -65,7 +65,7 @@ The flow generally moves from left to right, triggered by a developer pushing ne
    <img width="819" height="92" alt="Screenshot 2025-09-13 at 3 09 05 PM" src="https://github.com/user-attachments/assets/46e3babe-3aa2-4d78-9e21-a912cb7d0635" />
 
 
-   *Installing Jenkins*
+   # Installing Jenkins*
    - curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | sudo tee \
   /usr/share/keyrings/jenkins-keyring.asc > /dev/null
 echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
