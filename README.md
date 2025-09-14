@@ -198,7 +198,7 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 
 # 27. We need the fourth controller because this is responsible for argoCD UI.
 
-  <img width="611" height="71" alt="Screenshot 2025-09-13 at 5 52 56 PM" src="https://github.com/user-attachments/assets/77178524-d408-4128-bf6a-fbadd39f13f5" />
+  
 
 # 28. We want to run this controller on our local machine. So, to do that I will edit the fourth controller where I will change Type: ClusterIP to NodePort.
 
