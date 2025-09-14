@@ -124,8 +124,32 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
      - cd sonarqube-9.4.0.54424/bin/linux-x86-64/
      - sudo ./sonar.sh start
 
+ # 13. Set up the Sonarqube for the EC2/Local server.
+   - Now, browse the SonarQube server with the help of public_ip:9000. Make sure, you have opened port number 9000 in the instance’s security group.
+   - Username and password: admin
+   - In the next step, you have to reset your password.
+
+  <img width="492" height="265" alt="Screenshot 2025-09-13 at 4 06 09 PM" src="https://github.com/user-attachments/assets/b5858f41-107e-4391-babe-c3dfb36edacb" />
+
+ # 14. Your Sonarqube server is up and running which will look like this.
+ 
+  <img width="1170" height="465" alt="Screenshot 2025-09-14 at 11 01 19 AM" src="https://github.com/user-attachments/assets/b53923f5-ee7e-4da4-9804-193187b781a8" />
+  
+ # 15. Now, We have to connect the Jenkins Sonarqube scanner with this Sonarqube server. To do that, click on the profile which is right of the search box, and go to My Account.
+
+  <img width="1031" height="466" alt="Screenshot 2025-09-14 at 11 03 04 AM" src="https://github.com/user-attachments/assets/3560b7e5-95d5-4d5e-8d44-08c75d8531ee" />
+
+ # 16. To generate the toke for connecting with Jenkins Sonarqube Scanner with the Sonarqube Server. Click on the Security tab, give the names to the token, and click on Generate.
+
+  <img width="1166" height="388" alt="Screenshot 2025-09-14 at 11 03 53 AM" src="https://github.com/user-attachments/assets/3db8e543-d999-40fe-a733-a9a363640bf9" />
+
+ # 17. Now, Add the Generated Token in Jenkins. By Dashboard -> Manage Jenkins -> Credentials -> System -> Global credentials.
+
+  <img width="1170" height="495" alt="Screenshot 2025-09-14 at 11 05 12 AM" src="https://github.com/user-attachments/assets/bc9641b2-edc7-44e5-aec3-bb0415c351b9" />
 
 
+
+   
 
 
 # Key Responsibilities & Achievements:
