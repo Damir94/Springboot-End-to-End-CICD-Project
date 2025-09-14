@@ -198,11 +198,45 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 
 # 27. We need the fourth controller because this is responsible for argoCD UI.
 
-  
+  <img width="928" height="205" alt="Screenshot 2025-09-13 at 4 54 54 PM" src="https://github.com/user-attachments/assets/3661bdcf-7ded-4c48-be3e-eecd2e0ecdcb" />
+
 
 # 28. We want to run this controller on our local machine. So, to do that I will edit the fourth controller where I will change Type: ClusterIP to NodePort.
 
- 
+  - kubectl edit svc examole-argocd-server
+
+  <img width="327" height="513" alt="Screenshot 2025-09-14 at 12 41 58 PM" src="https://github.com/user-attachments/assets/f7a92f3b-0675-4d71-81fd-bba3de7a7342" />
+
+# 29. We are running the same command to get the services but this time there is a difference where we can see the NodePort. Now, to generate the browser URL, write the command 
+ - minikube service argocd-server.
+ And to get the browser URL, write the command
+ - minikube service list
+
+  <img width="1020" height="345" alt="Screenshot 2025-09-13 at 5 30 18 PM" src="https://github.com/user-attachments/assets/481a20cc-7df2-4682-893b-1e36f1f92bb9" />
+
+# 30. I have clicked on the link and you will get this UI, click on advance and then click on <your_IP>
+
+ - You can see the ArgoCD UI login Page.
+
+<img width="966" height="838" alt="Screenshot 2025-09-13 at 5 51 30 PM" src="https://github.com/user-attachments/assets/131256d9-04e7-44db-a83e-76cc42f1b935" />
+
+ - Here, you have to enter the username and password.
+ - The username will be admin and to get the password, refer to the below screenshots.
+   
+<img width="843" height="217" alt="Screenshot 2025-09-13 at 5 52 33 PM" src="https://github.com/user-attachments/assets/08b4542e-083f-4666-86a2-f6a7f4ffa51c" />
+
+<img width="611" height="71" alt="Screenshot 2025-09-13 at 5 52 56 PM" src="https://github.com/user-attachments/assets/a0ebbae4-7b51-483f-aeb1-2a2e24a194fd" />
+
+ - I have got the encrypted password and will copy it.
+ - Now, I have decrypted the password by using the below command
+
+<img width="990" height="84" alt="Screenshot 2025-09-13 at 5 53 33 PM" src="https://github.com/user-attachments/assets/7b85c3cf-6808-4986-b5a4-dbe9e29b74a6" />
+
+
+# 31.  Now, I have entered the username and password and logged the argoCD UI.
+
+
+
 # Key Responsibilities & Achievements:
  - Architected the pipeline orchestrated by Jenkins, triggered automatically via webhooks upon code commit.
  - Implemented Continuous Integration (CI) using Maven for building and dependency management, followed by comprehensive automated testing.
