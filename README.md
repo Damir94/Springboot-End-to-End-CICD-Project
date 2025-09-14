@@ -260,6 +260,17 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 
 <img width="1413" height="649" alt="Screenshot 2025-09-13 at 6 50 19 PM" src="https://github.com/user-attachments/assets/b032d283-cf41-4e74-92b8-a5cac7cb94a2" />
 
+# 33.  If you run the command, kubectl get pods. You can see the last two pods that are running which ensures that deployment is successful.
+
+<img width="561" height="98" alt="Screenshot 2025-09-14 at 1 07 29 PM" src="https://github.com/user-attachments/assets/c1f3dc75-4aa1-4d9b-8dd2-214da56244d5" />
+
+# 34. The Jenkins Pipeline
+
+<img width="1881" height="789" alt="Screenshot 2025-09-13 at 7 18 45 PM" src="https://github.com/user-attachments/assets/76bd5fe7-2626-4563-a4e3-146bb8464b0c" />
+
+<img width="982" height="528" alt="Screenshot 2025-09-13 at 7 23 33 PM" src="https://github.com/user-attachments/assets/bea1df74-f90a-4ae2-8a46-2aadc8a9ed1f" />
+
+
 
 # Key Responsibilities & Achievements:
  - Architected the pipeline orchestrated by Jenkins, triggered automatically via webhooks upon code commit.
