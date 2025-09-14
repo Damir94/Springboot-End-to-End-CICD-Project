@@ -33,6 +33,22 @@ The flow generally moves from left to right, triggered by a developer pushing ne
      - It detects that the manifests have been updated (with the new image tag) and automatically synchronizes the cluster, deploying the new version of the application. This is a declarative and automated deployment.
 
 
+**Implementation Steps**
+
+ *1. Jenkins Server Setup*
+ 
+   - We have to configure Jenkins, For that We are going to create an EC2 server where Jenkins will be installed. Also, We are going to install some other tools as well such as Sonarqube and Docker so, we need more RAM and CPU. 
+   - Configurations: t2.large, Ubuntu22.04, Security Group Port Open- 22, 9000, 8080, 8081, and 8082, Storage: 30GB gp2.
+
+  <img width="1232" height="760" alt="Screenshot 2025-09-13 at 3 03 47 PM" src="https://github.com/user-attachments/assets/ef3295c3-6355-4820-97b8-0ae90602aa3a" />
+
+  <img width="1266" height="522" alt="Screenshot 2025-09-13 at 3 04 30 PM" src="https://github.com/user-attachments/assets/54f626cf-f696-4afb-9343-f5408fbd9eb6" />
+
+  <img width="1227" height="292" alt="Screenshot 2025-09-13 at 3 04 54 PM" src="https://github.com/user-attachments/assets/643e3be2-1cef-4db0-982f-55de9522f924" />
+
+
+
+
 
 
 
