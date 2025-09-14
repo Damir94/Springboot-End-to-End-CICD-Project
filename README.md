@@ -4,6 +4,7 @@
 
 <img width="1324" height="661" alt="Screenshot 2025-09-13 at 9 13 35 PM" src="https://github.com/user-attachments/assets/9dc34dda-9008-4c71-8db1-9c6a0eb8c1d1" />
 
+
 **Key Responsibilities & Achievements:**
  - Architected the pipeline orchestrated by Jenkins, triggered automatically via webhooks upon code commit.
  - Implemented Continuous Integration (CI) using Maven for building and dependency management, followed by comprehensive automated testing.
