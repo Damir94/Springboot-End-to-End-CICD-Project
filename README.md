@@ -235,6 +235,30 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 
 # 31.  Now, I have entered the username and password and logged the argoCD UI.
 
+ <img width="281" height="319" alt="Screenshot 2025-09-13 at 5 54 08 PM" src="https://github.com/user-attachments/assets/33dad224-5738-484b-abcb-cbfe98b03498" />
+
+
+ <img width="774" height="659" alt="Screenshot 2025-09-13 at 5 55 00 PM" src="https://github.com/user-attachments/assets/c6a4cf1b-0186-40ec-a9e9-8ae22032b03a" />
+
+# 32. Click on CREATE APPLICATION. You can see this in the above screenshot.
+ - Now, To create the application, you have to enter some configurations, you can check it out in below screenshot and in the end click on CREATE.
+
+<img width="1177" height="288" alt="Screenshot 2025-09-14 at 12 58 07 PM" src="https://github.com/user-attachments/assets/e018b544-3c26-4d72-8af1-7062bc777e51" />
+
+<img width="1180" height="455" alt="Screenshot 2025-09-14 at 1 01 17 PM" src="https://github.com/user-attachments/assets/f03bb894-ca38-4562-a4c9-26fa79a9ea17" />
+
+ - Now, wait for some minutes. argoCD will deploy the application automatically.
+ -  I was getting an error because I have written the namespace in the namespace parameter which should be the default
+
+<img width="526" height="457" alt="Screenshot 2025-09-13 at 6 29 02 PM" src="https://github.com/user-attachments/assets/a4d8b1c8-dd88-4f65-acee-8ae32be382a5" />
+
+ 
+<img width="906" height="567" alt="Screenshot 2025-09-14 at 1 02 25 PM" src="https://github.com/user-attachments/assets/d8b8d64f-f4ee-4ed9-9a5d-be3e54ac0ec2" />
+
+ -  After clicking on Save, click on Refresh, and it will start the process again to deploy the application.
+ -  And My application has deployed successfully, as you can see in the below screenshot.
+
+<img width="1413" height="649" alt="Screenshot 2025-09-13 at 6 50 19 PM" src="https://github.com/user-attachments/assets/b032d283-cf41-4e74-92b8-a5cac7cb94a2" />
 
 
 # Key Responsibilities & Achievements:
