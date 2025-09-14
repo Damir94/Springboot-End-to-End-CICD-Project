@@ -275,7 +275,8 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 
 <img width="1784" height="888" alt="Screenshot 2025-09-13 at 7 20 16 PM" src="https://github.com/user-attachments/assets/d1500d37-89c5-4e44-b5be-d716d7f8d5e4" />
 
-
+# 36. Youtube Video Link
+ - https://youtu.be/JGQI5pkK82w
 
 # Key Responsibilities & Achievements:
  - Architected the pipeline orchestrated by Jenkins, triggered automatically via webhooks upon code commit.
@@ -284,3 +285,12 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
  - Automated containerization by building Docker images and pushing versioned images to DockerHub.
  - Implemented GitOps methodology using Argo CD for Continuous Deployment (CD). Argo CD automatically synchronizes and deploys new application versions to a Kubernetes cluster by detecting changes in the declarative manifests repository.
  - The result is a fully automated, self-service pipeline that reduces manual effort, minimizes deployment errors, and provides a clear, auditable trail from code.
+
+# Summary: What is the "Ultimate" Goal?
+
+  *This pipeline achieves full automation from code commit to production deployment. The "ultimate" aspects are:*
+   - Fully Automated: No manual steps are required for building, testing, or deploying after the initial code commit.
+   - High Quality: Incorporates automated testing and code quality gates (SonarQube) to prevent bugs from being deployed.
+   - GitOps Principle: Uses Argo CD to manage deployments declaratively using Git as the single source of truth. This makes the deployment process auditable, version-controlled, and easy to roll back.
+   - Containerized & Scalable: Uses Docker and Kubernetes, making the application portable, consistent across environments, and easily scalable.
+   - This is a robust, enterprise-grade CI/CD setup that embodies modern DevOps best practices
