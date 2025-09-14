@@ -147,9 +147,50 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 
   <img width="1170" height="495" alt="Screenshot 2025-09-14 at 11 05 12 AM" src="https://github.com/user-attachments/assets/bc9641b2-edc7-44e5-aec3-bb0415c351b9" />
 
+ # Install Docker on EC2 Server where Jenkins is Installed. You can refer to the below command and install it on your EC2 Server.
+  - sudo apt update
+  - sudo apt install docker.io
+  - sudo su -
+  - usermod -aG docker jenkins
+  - usermod -aG docker ubuntu
+  - systemctl restart docker
 
+ # 18. Install minikube on your local machine.
+  - Refer to the given link: https://minikube.sigs.k8s.io/docs/start/
 
+ # 19. Install ArgoCD by going on to https://operatorhub.io/operator/argocd-operator and clicking on install. You will get the commands that you have to use to install on your local machine where minikube is installed.
+
+   <img width="1122" height="440" alt="Screenshot 2025-09-14 at 11 17 08 AM" src="https://github.com/user-attachments/assets/72b452ae-c5a7-4ca9-b79b-4d74aaa3255b" />
    
+ # 20. Command ran and argoCD operator has been installed
+
+   <img width="1594" height="639" alt="Screenshot 2025-09-14 at 11 18 52 AM" src="https://github.com/user-attachments/assets/732867ba-518d-46d1-86bd-108571c66374" />
+
+ # 21. Store Docker credentials.
+ 
+  <img width="1408" height="617" alt="Screenshot 2025-09-14 at 11 23 31 AM" src="https://github.com/user-attachments/assets/5c5a75bc-30e7-4fd8-81dc-0e71f112dab9" />
+
+ # 22.  Store Github Credentials as well(Personal access token).
+
+  <img width="1200" height="537" alt="Screenshot 2025-09-14 at 11 24 16 AM" src="https://github.com/user-attachments/assets/b6037519-9280-4b90-ba82-f4138a06cb06" />
+
+  <img width="1636" height="321" alt="Screenshot 2025-09-13 at 4 49 12 PM" src="https://github.com/user-attachments/assets/77c01633-1a57-4979-afff-96d77375f131" />
+
+ # 23. Deploy on Kubernetes cluster
+   - Go to operatorhub.io and enter on argoCD then click the operator Documentation link
+
+  <img width="1154" height="581" alt="Screenshot 2025-09-14 at 11 25 55 AM" src="https://github.com/user-attachments/assets/e64508e9-e384-4d24-8029-ede0f14ad0ec" />
+
+ # 24. Click on usage -> basics and copy the selected script. 
+
+  <img width="1160" height="353" alt="Screenshot 2025-09-14 at 11 26 54 AM" src="https://github.com/user-attachments/assets/6e1db1fa-2580-46fc-8435-06b01ce82fe2" />
+  
+ # 25. Create a yml file and paste the script into the file. This script in below screenshot is correct one, paste this script.
+
+  <img width="534" height="62" alt="Screenshot 2025-09-14 at 11 28 54 AM" src="https://github.com/user-attachments/assets/63cb553f-ff2e-4371-8d74-625297d85124" />
+
+  <img width="599" height="291" alt="Screenshot 2025-09-14 at 11 30 32 AM" src="https://github.com/user-attachments/assets/b0757e50-9aeb-4497-90db-bd4355c93524" />
+
 
 
 # Key Responsibilities & Achievements:
