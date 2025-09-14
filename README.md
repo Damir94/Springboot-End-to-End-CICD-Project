@@ -33,7 +33,7 @@ The flow generally moves from left to right, triggered by a developer pushing ne
      - It detects that the manifests have been updated (with the new image tag) and automatically synchronizes the cluster, deploying the new version of the application. This is a declarative and automated deployment.
 
 
-**Implementation Steps**
+# Implementation Step
 
  *1. Jenkins Server Setup*
  
