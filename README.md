@@ -186,12 +186,13 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   <img width="1160" height="353" alt="Screenshot 2025-09-14 at 11 26 54 AM" src="https://github.com/user-attachments/assets/6e1db1fa-2580-46fc-8435-06b01ce82fe2" />
   
  # 25. Create a yml file and paste the script into the file. This script in below screenshot is correct one, paste this script.
-
-  <img width="534" height="62" alt="Screenshot 2025-09-14 at 11 28 54 AM" src="https://github.com/user-attachments/assets/63cb553f-ff2e-4371-8d74-625297d85124" />
-
+   - vim argocd-basics.yml 
+  
   <img width="599" height="291" alt="Screenshot 2025-09-14 at 11 30 32 AM" src="https://github.com/user-attachments/assets/b0757e50-9aeb-4497-90db-bd4355c93524" />
 
-
+ # 26. We are using this script to download the argoCD controller.
+   - Now, the last step to download the argoCD controller which will done by the help of command: kubectl apply -f argocd-basics.yml
+     
 
 # Key Responsibilities & Achievements:
  - Architected the pipeline orchestrated by Jenkins, triggered automatically via webhooks upon code commit.
