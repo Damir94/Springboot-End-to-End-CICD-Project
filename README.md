@@ -271,6 +271,11 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 <img width="982" height="528" alt="Screenshot 2025-09-13 at 7 23 33 PM" src="https://github.com/user-attachments/assets/bea1df74-f90a-4ae2-8a46-2aadc8a9ed1f" />
 
 
+# 35. Sonarqube Code Analysis
+
+<img width="1784" height="888" alt="Screenshot 2025-09-13 at 7 20 16 PM" src="https://github.com/user-attachments/assets/d1500d37-89c5-4e44-b5be-d716d7f8d5e4" />
+
+
 
 # Key Responsibilities & Achievements:
  - Architected the pipeline orchestrated by Jenkins, triggered automatically via webhooks upon code commit.
