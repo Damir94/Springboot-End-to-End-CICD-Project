@@ -215,10 +215,13 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   <img width="327" height="513" alt="Screenshot 2025-09-14 at 12 41 58 PM" src="https://github.com/user-attachments/assets/f7a92f3b-0675-4d71-81fd-bba3de7a7342" />
 
 # 29. We are running the same command to get the services but this time there is a difference where we can see the NodePort. Now, to generate the browser URL, write the command 
- - minikube service argocd-server.
+```bash
+minikube service argocd-server
+```
  And to get the browser URL, write the command
- - minikube service list
-
+ ```bash
+  minikube service list
+```
   <img width="1020" height="345" alt="Screenshot 2025-09-13 at 5 30 18 PM" src="https://github.com/user-attachments/assets/481a20cc-7df2-4682-893b-1e36f1f92bb9" />
 
 # 30. I have clicked on the link and you will get this UI, click on advance and then click on <your_IP>
