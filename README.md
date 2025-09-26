@@ -118,15 +118,16 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 
  # 12. Install Sonarqube on your EC2 Instance or the local machine.
    - Follow the command to install it on your machine.
-     - sudo apt install unzip
-     - sudo adduser sonarqube
-     - wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.4.0.54424.zip
-     - unzip sonarqube-9.4.0.54424.zip
-     - sudo chmod -R 755 /home/sonarqube/sonarqube-9.4.0.54424
-     - sudo chown -R sonarqube:sonarqube /home/sonarqube/sonarqube-9.4.0.54424
-     - cd sonarqube-9.4.0.54424/bin/linux-x86-64/
-     - sudo ./sonar.sh start
-
+   ```bash
+      sudo apt install unzip
+      sudo adduser sonarqube
+      wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.4.0.54424.zip
+      unzip sonarqube-9.4.0.54424.zip
+      sudo chmod -R 755 /home/sonarqube/sonarqube-9.4.0.54424
+      sudo chown -R sonarqube:sonarqube /home/sonarqube/sonarqube-9.4.0.54424
+      cd sonarqube-9.4.0.54424/bin/linux-x86-64/
+      sudo ./sonar.sh start
+   ```
  # 13. Set up the Sonarqube for the EC2/Local server.
    - Now, browse the SonarQube server with the help of public_ip:9000. Make sure, you have opened port number 9000 in the instance’s security group.
    - Username and password: admin
