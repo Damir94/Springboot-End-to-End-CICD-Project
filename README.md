@@ -49,9 +49,9 @@ The flow generally moves from left to right, triggered by a developer pushing ne
 
 
  # 2. After creating EC2 Instance, log in to the created machine using ssh.
-
-   - ssh -i <key-pair> ubuntu@instanceipaddress
-
+    ```bash
+    ssh -i <key-pair> ubuntu@instanceipaddress
+    ```
    <img width="849" height="140" alt="Screenshot 2025-09-13 at 3 07 01 PM" src="https://github.com/user-attachments/assets/be59b956-f0bc-4cb6-8276-73e6f9998d73" />
 
 
