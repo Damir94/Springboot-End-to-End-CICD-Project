@@ -57,7 +57,7 @@ The flow generally moves from left to right, triggered by a developer pushing ne
 
  # 3. Install Jenkins. Follow the command to install it on your EC2 Instance.
 
-   # Installing Java* 
+   # Installing Java 
    ```bash
    sudo apt update -y
    sudo apt install openjdk-17-jre -y
@@ -88,9 +88,9 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
    <img width="1600" height="322" alt="Screenshot 2025-09-13 at 3 11 23 PM" src="https://github.com/user-attachments/assets/ec111b15-120c-44ba-a117-f5161f0e3587" />
 
  # 5. Get the password using the command 
- 
-   - cat /var/lib/jenkins/secrets/initialAdminPassword.
- 
+  ```bash
+   cat /var/lib/jenkins/secrets/initialAdminPassword.
+  ```
  # 6. After entering the password, Click on Continue.
  
    <img width="973" height="455" alt="Screenshot 2025-09-13 at 3 12 38 PM" src="https://github.com/user-attachments/assets/a15a7059-3601-4daf-97ee-6c0122938afe" />
@@ -151,13 +151,14 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   <img width="1170" height="495" alt="Screenshot 2025-09-14 at 11 05 12 AM" src="https://github.com/user-attachments/assets/bc9641b2-edc7-44e5-aec3-bb0415c351b9" />
 
  # Install Docker on EC2 Server where Jenkins is Installed. You can refer to the below command and install it on your EC2 Server.
-  - sudo apt update
-  - sudo apt install docker.io
-  - sudo su -
-  - usermod -aG docker jenkins
-  - usermod -aG docker ubuntu
-  - systemctl restart docker
-
+ ```bash
+   sudo apt update
+   sudo apt install docker.io
+   sudo su -
+   usermod -aG docker jenkins
+   usermod -aG docker ubuntu
+   systemctl restart docker
+```
  # 18. Install minikube on your local machine.
   - Refer to the given link: https://minikube.sigs.k8s.io/docs/start/
 
@@ -185,14 +186,16 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   <img width="1160" height="353" alt="Screenshot 2025-09-14 at 11 26 54 AM" src="https://github.com/user-attachments/assets/6e1db1fa-2580-46fc-8435-06b01ce82fe2" />
   
  # 24. Create a yml file and paste the script into the file. This script in below screenshot is correct one, paste this script.
-   - vim argocd-basics.yml 
-  
+  ```bash
+    vim argocd-basics.yml 
+  ```
   <img width="599" height="291" alt="Screenshot 2025-09-14 at 11 30 32 AM" src="https://github.com/user-attachments/assets/b0757e50-9aeb-4497-90db-bd4355c93524" />
 
  # 25. We are using this script to download the argoCD controller.
    Now, the last step to download the argoCD controller which will done by the help of command:
-   - kubectl apply -f argocd-basics.yml
-
+   ```bash
+     kubectl apply -f argocd-basics.yml
+   ```
   <img width="1126" height="137" alt="Screenshot 2025-09-13 at 4 53 43 PM" src="https://github.com/user-attachments/assets/dc007d24-f803-4850-aad3-02604beac718" />
 
 # 26. Here, you can see that the argoCD controller has been created.
@@ -205,9 +208,9 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 
 
 # 28. We want to run this controller on our local machine. So, to do that I will edit the fourth controller where I will change Type: ClusterIP to NodePort.
-
-  - kubectl edit svc examole-argocd-server
-
+ ```bash
+  kubectl edit svc examole-argocd-server
+ ```
   <img width="327" height="513" alt="Screenshot 2025-09-14 at 12 41 58 PM" src="https://github.com/user-attachments/assets/f7a92f3b-0675-4d71-81fd-bba3de7a7342" />
 
 # 29. We are running the same command to get the services but this time there is a difference where we can see the NodePort. Now, to generate the browser URL, write the command 
